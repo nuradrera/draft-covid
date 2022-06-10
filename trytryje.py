@@ -67,12 +67,11 @@ Y = data['COVID-19']
 
 X = X.apply(LabelEncoder().fit_transform)
 
-# clf = RandomForestClassifier()
-# clf.fit(X, Y)
-# prediction = clf.predict(df)
+clf = RandomForestClassifier()
+clf.fit(X, Y)
+prediction = clf.predict(df)
 
 st.subheader('Prediction')
-# st.write(iris.target_names[prediction])
 st.write(prediction)
 
-prediction(F1,F2,F3,F4,F5,F6,F7,F8,F9,F10,F11,F12,F13,F14,F15,F16,F17,F18,F19,F20)
+# prediction(F1,F2,F3,F4,F5,F6,F7,F8,F9,F10,F11,F12,F13,F14,F15,F16,F17,F18,F19,F20)
