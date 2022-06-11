@@ -63,7 +63,6 @@ data = pd.read_csv('https://raw.githubusercontent.com/nuradrera/covid-19/main/Co
 
 # heart_data = heart_data.dropna() #have to remove NaN values
 
-X = X.apply(LabelEncoder().fit_transform)
 
 # heart_data['HeartDisease'] = labelencoder1.fit_transform(heart_data['HeartDisease'])
 # heart_data['Smoking'] = labelencoder2.fit_transform(heart_data['Smoking'])
@@ -88,6 +87,7 @@ X = X.apply(LabelEncoder().fit_transform)
 X = data.drop('COVID-19', axis=1)
 Y = data['COVID-19']
 
+X = X.apply(LabelEncoder().fit_transform)
 
 X_train, X_test, y_train, y_test = train_test_split(X, y,random_state=1234,test_size=0.2)
 
