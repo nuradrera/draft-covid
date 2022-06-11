@@ -123,9 +123,5 @@ def prediction(BreathingProblem, Fever, DryCough, SoreThroat, RunningNose, Asthm
         'SanitizationFromMarket': F20}, ignore_index = True)
     ypred = nb.predict(data2)
     st.write('Your prediction to have Covid-19 is:')
-    if ypred ==1:
-      st.write('Yes')
-    else:
-      st.write('No')  
-    
+  
 prediction(F1,F2,F3,F4,F5,F6,F7,F8,F9,F10,F11,F12,F13,F14,F15,F16,F17,F18,F19,F20)
