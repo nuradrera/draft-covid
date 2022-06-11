@@ -85,7 +85,7 @@ data = pd.read_csv('https://raw.githubusercontent.com/nuradrera/covid-19/main/Co
 # heart_data = heart_data.iloc[0:300000 , :]
 
 X = data.drop('COVID-19', axis=1)
-Y = data['COVID-19']
+y = data['COVID-19']
 
 X = X.apply(LabelEncoder().fit_transform)
 
