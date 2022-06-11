@@ -19,10 +19,6 @@ st.sidebar.write("""
 This is a web app demo using python libraries such as Streamlit, Sklearn etc
 """)
 
-# st.sidebar.write ("For more info, please contact:")
-
-# st.sidebar.write("<a href='https://www.linkedin.com/in/mirulsraf/'>Amirul Asraf </a>", unsafe_allow_html=True)
-
 F1 = st.sidebar.selectbox('Do you have Breathing Problem?',['Yes','No'])
 F2 = st.sidebar.selectbox('Do you have Fever?',['Yes','No'])
 F3 = st.sidebar.selectbox('Do you have Dry Cough?',['Yes','No'])
@@ -45,44 +41,6 @@ F19 = st.sidebar.selectbox('Do you Wearing Masks?',['Yes','No'])
 F20 = st.sidebar.selectbox('Do you Sanitization from Market?',['Yes','No'])
 
 data = pd.read_csv('https://raw.githubusercontent.com/nuradrera/covid-19/main/Covid%20Dataset.csv')
-
-# labelencoder1 = LabelEncoder() #kalau nak encoder lebih dari satu
-# labelencoder2 = LabelEncoder()
-# labelencoder3 = LabelEncoder()
-# labelencoder4 = LabelEncoder()
-# labelencoder5 = LabelEncoder()
-# labelencoder6 = LabelEncoder()
-# labelencoder7 = LabelEncoder()
-# labelencoder8 = LabelEncoder()
-# labelencoder9 = LabelEncoder()
-# labelencoder10 = LabelEncoder()
-# labelencoder11 = LabelEncoder()
-# labelencoder12 = LabelEncoder()
-# labelencoder13 = LabelEncoder()
-# labelencoder14 = LabelEncoder()
-
-# heart_data = heart_data.dropna() #have to remove NaN values
-
-
-# heart_data['HeartDisease'] = labelencoder1.fit_transform(heart_data['HeartDisease'])
-# heart_data['Smoking'] = labelencoder2.fit_transform(heart_data['Smoking'])
-# heart_data['AlcoholDrinking'] = labelencoder3.fit_transform(heart_data['AlcoholDrinking'])
-# heart_data['Sex'] = labelencoder4.fit_transform(heart_data['Sex'])
-# heart_data['Race'] = labelencoder5.fit_transform(heart_data['Race'])
-# heart_data['Diabetic'] = labelencoder6.fit_transform(heart_data['Diabetic'])
-# heart_data['PhysicalActivity'] = labelencoder7.fit_transform(heart_data['PhysicalActivity'])
-# heart_data['GenHealth'] = labelencoder8.fit_transform(heart_data['GenHealth'])
-# heart_data['Asthma'] = labelencoder9.fit_transform(heart_data['Asthma'])
-# heart_data['KidneyDisease'] = labelencoder10.fit_transform(heart_data['KidneyDisease'])
-# heart_data['Stroke'] = labelencoder11.fit_transform(heart_data['Stroke'])
-# heart_data['SkinCancer'] = labelencoder12.fit_transform(heart_data['SkinCancer'])
-# heart_data['DiffWalking'] = labelencoder13.fit_transform(heart_data['DiffWalking'])
-# heart_data['AgeCategory'] = labelencoder14.fit_transform(heart_data['AgeCategory'])
-
-
-# heart_data = heart_data[(heart_data['SleepTime']  > 3) & (heart_data['SleepTime']  <= 12)]
-
-# heart_data = heart_data.iloc[0:300000 , :]
 
 X = data.drop('COVID-19', axis=1)
 y = data['COVID-19']
