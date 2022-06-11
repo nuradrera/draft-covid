@@ -99,28 +99,28 @@ nb = GaussianNB()
 nb.fit(X_train_scaled, y_train)
 ypred = nb.predict(X_test)
 
-def prediction(Breathing Problem, Fever, Dry Cough, Sore throat, Running Nose, Asthma, Chronic Lung Disease, Headache, Heart Disease, Diabetes, Hyper Tension, Fatigue, Gastrointestinal, Abroad travel, Contact with COVID Patient, Attended Large Gathering, Visited Public Exposed Places, Family working in Public Exposed Places, Wearing Masks, Sanitization from Market):
+def prediction(BreathingProblem, Fever, DryCough, SoreThroat, RunningNose, Asthma, ChronicLungDisease, Headache, HeartDisease, Diabetes, HyperTension, Fatigue, Gastrointestinal, AbroadTravel, ContactWithCOVIDPatient, AttendedLargeGathering, VisitedPublicExposedPlaces, FamilyWorkingInPublicExposedPlaces, WearingMasks, SanitizationFromMarket):
     data2 = pd.DataFrame(columns = ['Breathing Problem','Fever,Dry Cough','Sore throat','Running Nose','Asthma','Chronic Lung Disease','Headache','Heart Disease','Diabetes','Hyper Tension','Fatigue','Gastrointestinal','Abroad travel','Contact with COVID Patient','Attended Large Gathering','Visited Public Exposed Places','Family working in Public Exposed Places','Wearing Masks','Sanitization from Market'])
     data2 = heart_data2.append({'Breathing Problem': F1,
         'Fever': F2,
-        'Dry Cough': F3,
-        'Sore throat': F4,
-        'Running Nose': F5,
+        'DryCough': F3,
+        'SoreThroat': F4,
+        'RunningNose': F5,
         'Asthma': F6,
-        'Chronic Lung Disease': F7,
+        'ChronicLungDisease': F7,
         'Headache': F8,
-        'Heart Disease': F9,
+        'HeartDisease': F9,
         'Diabetes': F10,
-        'Hyper Tension': F11,
+        'HyperTension': F11,
         'Fatigue': F12,
         'Gastrointestinal': F13,
-        'Abroad travel': F14,
-        'Contact with COVID Patient': F15,
-        'Attended Large Gathering': F16,
-        'Visited Public Exposed Places': F17,
-        'Family working in Public Exposed Places': F18,
-        'Wearing Masks': F19,
-        'Sanitization from Market': F20}, ignore_index = True)
+        'AbroadTravel': F14,
+        'ContactWithCOVIDPatient': F15,
+        'AttendedLargeGathering': F16,
+        'VisitedPublicExposedPlaces': F17,
+        'FamilyWorkingInPublicExposedPlaces': F18,
+        'WearingMasks': F19,
+        'SanitizationFromMarket': F20}, ignore_index = True)
     ypred = nb.predict(data2)
     st.write('Your prediction to have Covid-19 is:')
     if ypred ==1:
