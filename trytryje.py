@@ -116,15 +116,15 @@ y = data['COVID19']
 # st.write(df.T)
 
 
-# X_train, X_test, y_train, y_test = train_test_split(X, y,random_state=1234,test_size=0.2)
+X_train, X_test, y_train, y_test = train_test_split(X, y,random_state=1234,test_size=0.2)
 
-# scaler = StandardScaler()
-# X_train_scaled = scaler.fit_transform(X_train)
-# X_test_scaled = scaler.transform(X_test)    
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)    
 
-# nb = GaussianNB()
-# nb.fit(X_train_scaled, y_train)
-# ypred = nb.predict(X_test)
+nb = GaussianNB()
+nb.fit(X_train_scaled, y_train)
+ypred = nb.predict(X_test)
 
 def prediction(BreathingProblem, Fever, DryCough, SoreThroat, RunningNose, Asthma, ChronicLungDisease, Headache, HeartDisease, Diabetes, HyperTension, Fatigue , Gastrointestinal , AbroadTravel, ContactWithCOVIDPatient, AttendedLargeGathering, VisitedPublicExposedPlaces, FamilyWorkingInPublicExposedPlaces, WearingMasks, SanitizationFromMarket):
     data2 = pd.DataFrame(columns = ['Breathing Problem','Fever,Dry Cough','Sore throat','Running Nose','Asthma','Chronic Lung Disease','Headache','Heart Disease','Diabetes','Hyper Tension','Fatigue ','Gastrointestinal ','Abroad travel','Contact with COVID Patient','Attended Large Gathering','Visited Public Exposed Places','Family working in Public Exposed Places','Wearing Masks','Sanitization from Market'])
