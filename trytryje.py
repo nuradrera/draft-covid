@@ -61,7 +61,7 @@ F18 = st.sidebar.slider('Do you have Family working in Public Exposed Places?',m
 F19 = st.sidebar.slider('Do you Wearing Masks?',min_value= 0, max_value = 1, value=1)
 F20 = st.sidebar.slider('Do you Sanitization from Market?',min_value= 0, max_value = 1, value=1)
 
-data = pd.read_csv('https://raw.githubusercontent.com/nuradrera/covid-19/main/Covid%20Dataset.csv')
+data = pd.read_csv('https://raw.githubusercontent.com/nuradrera/draft-covid/main/Covid19Dataset.csv')
 
 labelencoder1 = LabelEncoder() #kalau nak encoder lebih dari satu
 labelencoder2 = LabelEncoder()
