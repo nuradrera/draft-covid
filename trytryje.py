@@ -107,8 +107,8 @@ data['FamilyWorkingInPublicExposedPlaces'] = labelencoder18.fit_transform(data['
 data['WearingMasks'] = labelencoder19.fit_transform(data['WearingMasks'])
 data['SanitizationFromMarket'] = labelencoder20.fit_transform(data['SanitizationFromMarket'])
 
-X = data.drop('COVID-19', axis=1)
-y = data['COVID-19']
+X = data.drop('COVID19', axis=1)
+y = data['COVID19']
 
 df = user_input_features()
 
@@ -139,8 +139,8 @@ def prediction(BreathingProblem, Fever, DryCough, SoreThroat, RunningNose, Asthm
         'HeartDisease': F9,
         'Diabetes': F10,
         'HyperTension': F11,
-        'Fatigue': F12,
-        'Gastrointestinal': F13,
+        'Fatigue ': F12,
+        'Gastrointestinal ': F13,
         'AbroadTravel': F14,
         'ContactWithCOVIDPatient': F15,
         'AttendedLargeGathering': F16,
