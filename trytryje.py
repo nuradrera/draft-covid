@@ -98,7 +98,7 @@ data['HeartDisease'] = labelencoder9.fit_transform(data['HeartDisease'])
 data['Diabetes'] = labelencoder10.fit_transform(data['Diabetes'])
 data['HyperTension'] = labelencoder11.fit_transform(data['HyperTension'])
 data['Fatigue '] = labelencoder12.fit_transform(data['Fatigue '])
-data['Gastrointestinal'] = labelencoder13.fit_transform(data['Gastrointestinal'])
+data['Gastrointestinal '] = labelencoder13.fit_transform(data['Gastrointestinal '])
 data['AbroadTravel'] = labelencoder14.fit_transform(data['AbroadTravel'])
 data['ContactWithCOVIDPatient'] = labelencoder15.fit_transform(data['ContactWithCOVIDPatient'])
 data['AttendedLargeGathering'] = labelencoder16.fit_transform(data['AttendedLargeGathering'])
@@ -127,7 +127,7 @@ st.write(df.T)
 # ypred = nb.predict(X_test)
 
 def prediction(BreathingProblem, Fever, DryCough, SoreThroat, RunningNose, Asthma, ChronicLungDisease, Headache, HeartDisease, Diabetes, HyperTension, Fatigue, Gastrointestinal, AbroadTravel, ContactWithCOVIDPatient, AttendedLargeGathering, VisitedPublicExposedPlaces, FamilyWorkingInPublicExposedPlaces, WearingMasks, SanitizationFromMarket):
-    data2 = pd.DataFrame(columns = ['Breathing Problem','Fever,Dry Cough','Sore throat','Running Nose','Asthma','Chronic Lung Disease','Headache','Heart Disease','Diabetes','Hyper Tension','Fatigue','Gastrointestinal','Abroad travel','Contact with COVID Patient','Attended Large Gathering','Visited Public Exposed Places','Family working in Public Exposed Places','Wearing Masks','Sanitization from Market'])
+    data2 = pd.DataFrame(columns = ['Breathing Problem','Fever,Dry Cough','Sore throat','Running Nose','Asthma','Chronic Lung Disease','Headache','Heart Disease','Diabetes','Hyper Tension','Fatigue ','Gastrointestinal ','Abroad travel','Contact with COVID Patient','Attended Large Gathering','Visited Public Exposed Places','Family working in Public Exposed Places','Wearing Masks','Sanitization from Market'])
     data2 = data2.append({'BreathingProblem': F1,
         'Fever': F2,
         'DryCough': F3,
