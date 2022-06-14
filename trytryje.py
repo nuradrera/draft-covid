@@ -53,7 +53,7 @@ F10 = st.sidebar.slider('Do you have Diabetes?',min_value= 0, max_value = 1, val
 F11 = st.sidebar.slider('Do you have Hyper Tension?',min_value= 0, max_value = 1, value=1)
 F12 = st.sidebar.slider('Do you have Fatigue?',min_value= 0, max_value = 1, value=1)
 F13 = st.sidebar.slider('Do you have Gastrointestinal?',min_value= 0, max_value = 1, value=1)
-F14 = st.sidebar.slider('Do you have Abroad travel?',min_value= 0, max_value = 1, value=1)min_value= 0, max_value = 1, value=1)
+F14 = st.sidebar.slider('Do you have Abroad travel?',min_value= 0, max_value = 1, value=1)
 F15 = st.sidebar.slider('Do you have Contact with COVID Patient?',min_value= 0, max_value = 1, value=1)
 F16 = st.sidebar.slider('Do you have Attended Large Gathering?',min_value= 0, max_value = 1, value=1)
 F17 = st.sidebar.slider('Do you have Visited Public Exposed Places?',min_value= 0, max_value = 1, value=1)
