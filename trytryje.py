@@ -110,10 +110,10 @@ data['SanitizationFromMarket'] = labelencoder20.fit_transform(data['Sanitization
 X = data.drop('COVID19', axis=1)
 y = data['COVID19']
 
-df = user_input_features()
+# df = user_input_features()
 
-st.subheader('User Input parameters')
-st.write(df.T)
+# st.subheader('User Input parameters')
+# st.write(df.T)
 
 
 # X_train, X_test, y_train, y_test = train_test_split(X, y,random_state=1234,test_size=0.2)
