@@ -79,11 +79,9 @@ def user_input_features():
 data = pd.read_csv('https://raw.githubusercontent.com/nuradrera/covid-19/main/Covid_Dataset.csv')
 
 
+X = X.apply(LabelEncoder().fit_transform)
 
 X = data.drop('COVID19', axis=1)
-
-
-X = X.apply(LabelEncoder().fit_transform)
 Y = data['COVID19']
 
 df = user_input_features()
